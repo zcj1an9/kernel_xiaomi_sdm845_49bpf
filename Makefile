@@ -418,7 +418,7 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -pipe \
 		   -mllvm -polly \
 		   -mllvm -polly-run-dce \
 		   -mllvm -polly-run-inliner \
-		   -mllvm -polly-opt-fusion=max \
+#		   -mllvm -polly-opt-fusion=max \
 		   -mllvm -polly-ast-use-context \
 		   -mllvm -polly-vectorizer=stripmine \
 		   -mllvm -polly-detect-keep-going \
@@ -802,7 +802,7 @@ KBUILD_CFLAGS	+= -O3 -mtune=cortex-a55 \
 #KBUILD_CFLAGS	+= -floop-strip-mine -floop-block
 #KBUILD_CFLAGS	+= -floop-optimize -ftree-vectorize -ftracer
 LDFLAGS		+= -O3
-LDFLAGS += -fuse-ld=gold
+#LDFLAGS += -fuse-ld=gold
 KBUILD_CFLAGS	+= $(call cc-option,-mabi=lp64)
 KBUILD_AFLAGS	+= $(call cc-option,-mabi=lp64)
 
